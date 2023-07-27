@@ -5,6 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Scrollable from "./Scrollable";
 
 function createData(
   name: string,
@@ -25,10 +26,13 @@ const rows = [
   createData("Gingerbread", 356, 16.0, 49, 3.9, "label1")
 ];
 
+const TABLE_WIDTH = 650;
+
 const Table = () => {
   return (
-    <TableContainer component={Paper}>
-      <MUITable aria-label="simple table">
+    <Scrollable tableWidth={TABLE_WIDTH} type="table">
+      {/* <TableContainer component={Paper}> */}
+      <MUITable aria-label="simple table" sx={{ minWidth: TABLE_WIDTH }}>
         {/* <MUITable sx={{ minWidth: 650 }} aria-label="simple table"> */}
         <TableHead>
           <TableRow>
@@ -58,7 +62,8 @@ const Table = () => {
           ))}
         </TableBody>
       </MUITable>
-    </TableContainer>
+      {/* </TableContainer> */}
+    </Scrollable>
   );
 };
 
