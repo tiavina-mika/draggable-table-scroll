@@ -4,11 +4,7 @@
 import { jsx } from "@emotion/react";
 import { useState } from "react";
 
-import {
-  IProjectProduct,
-  IProjectProductOption,
-  ISelectOption
-} from "../types/app.type";
+import { IProjectProductOption } from "../types/app.type";
 import ButtonSwitch from "../components/ButtonSwitch";
 import { Box } from "@mui/material";
 
